@@ -6,7 +6,7 @@ const dbName = "ocean_bancodados_10_03_2022";
 
 async function main() {
   // Conexão com o bando de dados
-
+/*
   console.log("Conectando ao banco de dados...");
 
   const client = await MongoClient.connect(url);
@@ -16,7 +16,7 @@ async function main() {
   const collection = db.collection("herois");
 
   console.log("Conexão com o banco de dados realizada com sucesso.");
-
+*/
   const app = express();
 
   // Sinaliza para o express entender o JSON no corpo das requisições
@@ -92,7 +92,7 @@ async function main() {
     res.send("Item removido com sucesso!");
   });
 
-  app.listen(3000);
+  app.listen(process.env.PORT || 3000);
 }
 
 main();
